@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Start Page -->
+    <div id="start-page" class="page active">
+        <div class="container">
+            <div class="welcome-box">
+                <h1>Welcome to <span>QuizMaster</span></h1>
+                <p>Test your knowledge across various topics and challenge yourself!</p>
+                <button id="start-btn" class="btn pulse">Start Quiz <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topic Selection Page -->
+    <div id="topic-page" class="page">
+        <div class="container">
+            <h2>Choose Your Quiz Topic</h2>
+            <div class="topics-grid">
+                <div class="topic-card" data-topic="html">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                    <p>HyperText Markup Language basics</p>
+                </div>
+                <div class="topic-card" data-topic="css">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                    <p>Cascading Style Sheets fundamentals</p>
+                </div>
+                <div class="topic-card" data-topic="js">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                    <p>Client-side scripting language</p>
+                </div>
+                <div class="topic-card" data-topic="dbms">
+                    <i class="fas fa-database"></i>
+                    <h3>DBMS</h3>
+                    <p>Database Management Systems</p>
+                </div>
+                <div class="topic-card" data-topic="dsa">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>DSA</h3>
+                    <p>Data Structures & Algorithms</p>
+                </div>
+                <div class="topic-card" data-topic="gk">
+                    <i class="fas fa-globe"></i>
+                    <h3>General Knowledge</h3>
+                    <p>World facts and trivia</p>
+                </div>
+                <div class="topic-card" data-topic="science">
+                    <i class="fas fa-flask"></i>
+                    <h3>Science</h3>
+                    <p>Physics, Chemistry & Biology</p>
+                </div>
+                <div class="topic-card" data-topic="history">
+                    <i class="fas fa-landmark"></i>
+                    <h3>History</h3>
+                    <p>World history and events</p>
+                </div>
+            </div>
+            <button id="back-to-start" class="btn back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="page">
+        <div class="container">
+            <div class="quiz-header">
+                <h2 id="quiz-topic"></h2>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                    <span id="progress-text">1/5</span>
+                </div>
+            </div>
+            
+            <div class="quiz-container">
+                <div id="question-container">
+                    <div id="question">Question goes here</div>
+                    <div id="answer-buttons" class="btn-grid">
+                        <!-- Answer buttons will be added here dynamically -->
+                    </div>
+                </div>
+                <div id="controls">
+                    <button id="prev-btn" class="btn">Previous</button>
+                    <button id="next-btn" class="btn">Next</button>
+                    <button id="submit-btn" class="btn submit-btn">Submit Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="results-page" class="page">
+        <div class="container">
+            <div class="results-box">
+                <h2>Quiz Results</h2>
+                <div class="score-container">
+                    <div class="circular-progress">
+                        <svg>
+                            <circle class="progress-circle" cx="100" cy="100" r="90"></circle>
+                            <circle class="progress-circle-fill" cx="100" cy="100" r="90"></circle>
+                        </svg>
+                        <div class="score-text">
+                            <span id="score-percentage">0%</span>
+                            <small>Score</small>
+                        </div>
+                    </div>
+                    <div class="score-details">
+                        <p id="topic-name">Topic: HTML</p>
+                        <p id="correct-answers">Correct: 0/5</p>
+                        <p id="result-message">Keep practicing!</p>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="restart-quiz" class="btn"><i class="fas fa-redo"></i> Try Again</button>
+                    <button id="choose-topic" class="btn"><i class="fas fa-list"></i> Choose Another Topic</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
