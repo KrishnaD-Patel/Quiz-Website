@@ -6,7 +6,7 @@
 </div>
 
 # 📝 Features 
-✅ This is a quiz application website. <br>
+✅ This is a simple quiz website made using HTML, CSS and Javascript. <br>
 
 # 💻 Technologies used
 <img src="https://img.shields.io/badge/HTML5-FF3300?style=for-the-badge&logo=html5&logoColor=white">
